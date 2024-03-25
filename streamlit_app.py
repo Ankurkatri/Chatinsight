@@ -149,6 +149,13 @@ def app():
 
                     return plt.gca()
 
+                                  # WordCloud
+        st.title("Wordcloud")
+        df_wc = helper.create_wordcloud(selected_user,df)
+        fig,ax = plt.subplots()
+        ax.imshow(df_wc)
+        st.pyplot(fig)
+                
                 msg = f"## Overall Summary\n" \
                       f"{len(df)} total messages from" \
                       f" {len(df.author.unique())}  " \
