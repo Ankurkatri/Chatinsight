@@ -262,6 +262,15 @@ def app():
                 o = relative_activity_ts(df=df)
                 st.area_chart(o)
 
+        # WordCloud
+        st.title("Wordcloud")
+        df_wc = helper.create_wordcloud(selected_user,df)
+        fig,ax = plt.subplots()
+        ax.imshow(df_wc)
+        st.pyplot(fig)
+
+
+                
                 # Timeseries: Activity by day of week
                 st.write("""
                     ## Activity by day of week
