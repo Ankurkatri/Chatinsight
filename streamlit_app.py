@@ -156,6 +156,13 @@ def app():
                       f"from {df.date.min()} to {df.date.max()}."
                 st.write(msg)
 
+                  # WordCloud
+        st.title("Wordcloud")
+        df_wc = helper.create_wordcloud(selected_user,df)
+        fig,ax = plt.subplots()
+        ax.imshow(df_wc)
+        st.pyplot(fig)
+                
                 # Basic summary of messages
                 st.write(
                     "## Basic summary of messages")
@@ -312,14 +319,6 @@ def app():
                             "responded the messages at least y mins later, "
                             "half of the time."
                             "")
-        # WordCloud
-        st.title("Wordcloud")
-        df_wc = helper.create_wordcloud(selected_user,df)
-        fig,ax = plt.subplots()
-        ax.imshow(df_wc)
-        st.pyplot(fig)
-
-        
                 # Response time
                 prev_msg_lt_180_seconds = (df.timestamp - df.timestamp.shift(
                     1)).dt.seconds < 180
