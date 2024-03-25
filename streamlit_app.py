@@ -260,18 +260,8 @@ def app():
                             "distribution since the data is likely to be "
                             f"noisy.\nChart starts from year {min_year + 1}")
                 o = relative_activity_ts(df=df)
-                st.area_chart(o)
-
-        # WordCloud
-        st.title("Wordcloud")
-        df_wc = helper.create_wordcloud(selected_user,df)
-        fig,ax = plt.subplots()
-        ax.imshow(df_wc)
-        st.pyplot(fig)
-
-
-                
-                # Timeseries: Activity by day of week
+                st.area_chart(o)                
+              # Timeseries: Activity by day of week
                 st.write("""
                     ## Activity by day of week
                     0 - Monday
@@ -322,7 +312,14 @@ def app():
                             "responded the messages at least y mins later, "
                             "half of the time."
                             "")
+        # WordCloud
+        st.title("Wordcloud")
+        df_wc = helper.create_wordcloud(selected_user,df)
+        fig,ax = plt.subplots()
+        ax.imshow(df_wc)
+        st.pyplot(fig)
 
+        
                 # Response time
                 prev_msg_lt_180_seconds = (df.timestamp - df.timestamp.shift(
                     1)).dt.seconds < 180
