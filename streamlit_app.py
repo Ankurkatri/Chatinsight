@@ -460,12 +460,5 @@ def app():
                 st.cache_data.clear()
                 st.cache_resource.clear()
 
-                  # WordCloud
-        st.title("Wordcloud")
-        df_wc = helper.create_wordcloud(selected_user,df)
-        fig,ax = plt.subplots()
-        ax.imshow(df_wc)
-        st.pyplot(fig)
-
 if __name__ == "__main__":
     app()
