@@ -12,7 +12,7 @@ from matplotlib.colors import LinearSegmentedColormap
 from scipy.ndimage import gaussian_filter
 import math
 from collections import Counter
-from wordcloud import WordCloud
+from wordcloud import WordCloud,STOPWORDS
 
 
 def create_wordcloud(selected_user,df):
