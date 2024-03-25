@@ -234,12 +234,7 @@ def app():
                                           title='Activity % by author'
                                           )
                 st.altair_chart(c)
-                # WordCloud
-                st.title("Wordcloud")
-                df_wc = helper.create_wordcloud(selected_user,df)
-                fig,ax = plt.subplots()
-                ax.imshow(df_wc)
-                st.pyplot(fig)  
+            
                 # Smoothed stacked activity area timeseries plot
                 st.write("""## Activity Area Plot """)
                 with st.expander("More info"):
