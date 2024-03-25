@@ -155,13 +155,6 @@ def app():
                       f"people " \
                       f"from {df.date.min()} to {df.date.max()}."
                 st.write(msg)
-
-                  # WordCloud
-        st.title("Wordcloud")
-        df_wc = helper.create_wordcloud(selected_user,df)
-        fig,ax = plt.subplots()
-        ax.imshow(df_wc)
-        st.pyplot(fig)
                 
                 # Basic summary of messages
                 st.write(
@@ -467,6 +460,12 @@ def app():
                 st.cache_data.clear()
                 st.cache_resource.clear()
 
+                  # WordCloud
+        st.title("Wordcloud")
+        df_wc = helper.create_wordcloud(selected_user,df)
+        fig,ax = plt.subplots()
+        ax.imshow(df_wc)
+        st.pyplot(fig)
 
 if __name__ == "__main__":
     app()
