@@ -13,8 +13,6 @@ from scipy.ndimage import gaussian_filter
 import math
 from collections import Counter
 from wordcloud import WordCloud
-from urlextract import URLExtract
-import emoji
 
 
 def create_wordcloud(selected_user,df):
