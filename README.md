@@ -1,7 +1,5 @@
-# whatsapp-chat-analyzer
-A Streamlit application for analyzing Whatsapp Group Chat. See [here](https://whats-chat-detective.streamlit.app/)
 
-V1.0 2023-02-25:
+V1.0 2024-02-25:
 
 ### What's New?
 - GIF, Sticker, Audio, Deleted, Location Message Statistics.
