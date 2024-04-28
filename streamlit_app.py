@@ -89,7 +89,7 @@ def app():
                     author_list)
                 selected_lang = st.radio(
                     "What\'s your Whatsapp Language?",
-                    ( 'English' ))
+                    ("English", 'Turkish'))
                 submit_button = st.form_submit_button(label='Submit')
                 if submit_button and len(selected_authors) < 2:
                     st.warning("Proceeding with all of the authors. Please "
