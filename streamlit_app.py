@@ -30,7 +30,6 @@ with st.expander("About this app"):
     
     ### Info
      - This does not save your chat file.
-     - Note that it only supports English and Turkish right now.
      - Most of the charts are based on group chats but it works for dms too, 
      some of the charts will be pointless but give it a shot.
      - Sometimes whatsapp can have problems while exporting with date formats. 
